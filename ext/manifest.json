@@ -12,11 +12,14 @@
     "browser_action": {
         "default_title": "Mock Web test assistent",
         "default_icon": "cookie.png",
-        "default_popup": "popup.html"
+        "default_popup": "src/html/popup.html"
     },
     "background": {
         "scripts": [
-            "background.js"
+            "src/js/background.js"
         ]
-    }
+    },
+    "web_accessible_resources": [
+        "src/js/*"
+    ]
 }
