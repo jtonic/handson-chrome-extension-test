@@ -1,0 +1,14 @@
+body {
+  border-style: ridge;
+  border-color: cornflowerblue;
+  border-width: 5px;
+}
+
+div#ext {
+  padding: 5px;
+  display: block;
+  float: right;
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+}

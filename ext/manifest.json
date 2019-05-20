@@ -23,5 +23,20 @@
     },
     "web_accessible_resources": [
         "src/js/*"
+    ],
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": [
+                "*://developer.chrome.com/*"
+            ],
+            "css": [
+                "src/css/content.css"
+            ],
+            "js": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "src/js/content.js"
+            ]
+        }
     ]
 }
