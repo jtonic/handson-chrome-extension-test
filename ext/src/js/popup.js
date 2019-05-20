@@ -6,3 +6,5 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+chrome.browserAction.setBadgeText({ text: "ON" });
