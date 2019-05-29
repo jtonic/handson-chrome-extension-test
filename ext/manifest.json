@@ -38,5 +38,16 @@
                 "src/js/content.js"
             ]
         }
-    ]
+    ],
+    "commands": {
+        "duplicate-tab": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+D",
+                "mac": "MacCtrl+Shift+D",
+                "chromeos": "Ctrl+Shift+D",
+                "linux": "Ctrl+Shift+D"
+            },
+            "description": "Duplicate tab"
+        }
+    }
 }

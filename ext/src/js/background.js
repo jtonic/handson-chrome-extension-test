@@ -30,4 +30,36 @@ chrome.runtime.onInstalled.addListener(async function() {
       }
     });
   });
+
+  if (chrome.commands) {
+    chrome.commands.getAll(commands => {
+      console.log("commands");
+      commands.forEach(command => {
+        console.log(command);
+      });
+    });
+  }
 });
+
+chrome.commands.onCommand.addListener(function(command) {
+  if (command === "duplicate-tab") {
+    findCurrentTab().then(tabId => {
+      console.log("Duplicate tab for id", tabId);
+      chrome.tabs.duplicate(tabId);
+    });
+  }
+});
+
+function findCurrentTab() {
+  return new Promise((resolve, reject) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+      console.log("tabs", tabs);
+      console.log(Array.isArray(tabs) && tabs.length > 0);
+      if (Array.isArray(tabs) && tabs.length > 0) {
+        resolve(tabs[0].id);
+      } else {
+        reject(new Error("Current tab not found"));
+      }
+    });
+  });
+}
