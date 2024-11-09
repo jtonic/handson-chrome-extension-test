@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Mock Web test assistent",
+    "name": "Mock Web test assistant",
     "version": "0.0.1",
-    "description": "The assistent to mock test a Web application (based on cookies)",
+    "description": "The assistant to mock test a Web application (based on cookies)",
     "permissions": [
         "cookies",
         "tabs",
@@ -12,7 +12,7 @@
         "https://*/*"
     ],
     "browser_action": {
-        "default_title": "Mock Web test assistent",
+        "default_title": "Mock Web test assistant",
         "default_icon": "cookie.png",
         "default_popup": "src/html/popup.html"
     },
